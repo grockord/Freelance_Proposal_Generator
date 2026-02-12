@@ -1,0 +1,36 @@
+﻿@model FreelanceProposal.Models.Document
+
+<h2>Create Proposal</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Client Name</label>
+        <input asp-for="ClientName" />
+    </div>
+    <div>
+        <label>Project Title</label>
+        <input asp-for="ProjectTitle" />
+    </div>
+    <div>
+        <label>Business Description</label>
+        <textarea asp-for="BusinessDescription"></textarea>
+    </div>
+    <div>
+        <label>Goals</label>
+        <textarea asp-for="Goals"></textarea>
+    </div>
+    <div>
+        <label>Scope (JSON)</label>
+        <input asp-for="ScopeJson" placeholder='["Design","Development"]' />
+    </div>
+    <div>
+        <label>Total Price</label>
+        <input asp-for="TotalPrice" />
+    </div>
+    <div>
+        <label>Deposit %</label>
+        <input asp-for="DepositPercentage" />
+    </div>
+    <button type="submit">Generate PDF</button>
+</form>
+
